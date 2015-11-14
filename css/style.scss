@@ -1,5 +1,6 @@
 $black: #000000;
 $white: #FFFFFF;
+$grey: #D7D7D7;
 $font-stack: Helvetica, sans-serif;
 $font-size-normal: 14pt;
 
@@ -21,23 +22,29 @@ body {
 }
 
 #header {
+  z-index: 999;
   min-height: 30%;
   width: 100%;
   background-color: $black;
+  position: fixed ;
 }
 
 #nav{
-  z-index: 4;
+  z-index:998;
+  position: absolute;
+  bottom: 0;
   margin: 0 auto;
   text-align: center;
   min-height: 5%;
   width: 100%;
   background-color: $white;
+  border-bottom: 1px solid $grey;
   ul{
     margin: 0;
     padding: 0; 
     li{
       display:inline-block;
+      padding-right: 20px;
     }
   }
 }
@@ -53,11 +60,14 @@ body {
 }
 
 #container {
+  z-index: 0;
+  position: relative;
+  top: 30%;
   min-height: 80%;
   width: 60%;
-  //background-color: $white;
-  background-color: green;
-  color: $white;
+  background-color: $white;
+  padding: 20px;
+  color: $black;
   margin: 0 auto;
 }
 
@@ -67,6 +77,9 @@ p{
 }
 
 footer{
+  z-index: 1;
+  position: relative;
+  top: 30%;
   min-height: 5%;
   background-color: $black;
 }

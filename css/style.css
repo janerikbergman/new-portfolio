@@ -13,22 +13,28 @@ body {
   font-family: Helvetica, sans-serif; }
 
 #header {
+  z-index: 999;
   min-height: 30%;
   width: 100%;
-  background-color: #000000; }
+  background-color: #000000;
+  position: fixed; }
 
 #nav {
-  z-index: 4;
+  z-index: 998;
+  position: absolute;
+  bottom: 0;
   margin: 0 auto;
   text-align: center;
   min-height: 5%;
   width: 100%;
-  background-color: #FFFFFF; }
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #D7D7D7; }
   #nav ul {
     margin: 0;
     padding: 0; }
     #nav ul li {
-      display: inline-block; }
+      display: inline-block;
+      padding-right: 20px; }
 
 .navButton {
   background-color: Transparent;
@@ -40,10 +46,14 @@ body {
   font-size: 14pt; }
 
 #container {
+  z-index: 0;
+  position: relative;
+  top: 30%;
   min-height: 80%;
   width: 60%;
-  background-color: green;
-  color: #FFFFFF;
+  background-color: #FFFFFF;
+  padding: 20px;
+  color: #000000;
   margin: 0 auto; }
 
 p {
@@ -51,6 +61,9 @@ p {
   margin: 0; }
 
 footer {
+  z-index: 1;
+  position: relative;
+  top: 30%;
   min-height: 5%;
   background-color: #000000; }
 
