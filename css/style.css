@@ -1,3 +1,6 @@
+@font-face {
+  font-family: Source-sans;
+  src: url(../fonts/SourceSansPro-Black.woff) format("woff"); }
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -16,8 +19,17 @@ body {
   position: fixed;
   top: 0px;
   width: 100%;
-  height: 20%;
+  min-height: 20%;
   background-color: #000000; }
+
+/*#header.shrink {
+  height:10%;
+}*/
+h1 {
+  font-family: Source-sans;
+  color: #FFFFFF;
+  font-size: 30pt;
+  text-align: center; }
 
 #nav {
   position: absolute;
