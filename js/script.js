@@ -1,9 +1,20 @@
 // JavaScript Document
 $(document).ready(function (){
-  /*$("#button").click(function() {
-    $('html, body').animate({
-        scrollTop: $("#p2").offset().top
-    }, 2000);
-  });*/
+
+ /*$(function(){
+ var shrinkHeader = 100;
+  $(window).scroll(function() {
+    var scroll = getCurrentScroll();
+      if ( scroll >= shrinkHeader ) {
+           $("#header").addClass("shrink");
+        }
+        else {
+            $("#header").removeClass("shrink");
+        }
+  });
+  function getCurrentScroll() {
+      return window.pageYOffset;
+      }
+  });  */
   
 });
