@@ -30,7 +30,7 @@ body {
   position: fixed;
   top: 0px;
   width: 100%;
-  min-height: 20%;
+  height: 20%;
   background-color: $black;
 }
 
@@ -42,7 +42,10 @@ h1{
   font-family: Source-sans;
   color: $white;
   font-size: 30pt;
-  text-align:center
+  text-align:center;
+  margin: 0;
+  top: 50%;
+  margin-top: 20px;
 }
 
 #nav{
