@@ -22,10 +22,66 @@ body {
   height: 20%;
   background-color: #000000; }
 
-/*#header.shrink {
-  height:10%;
-}*/
-h1 {
+#navMobile {
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  color: #FFFFFF; }
+  @media screen and (min-width: 600px) {
+    #navMobile {
+      display: none; } }
+
+#accordion {
+  height: 100%;
+  width: 100%; }
+
+#accordion .ui-accordion-content {
+  height: 400px;
+  border-radius: 0px;
+  padding: 0px; }
+
+#accordion .ui-accordion-header {
+  height: 100%;
+  width: 100%;
+  background: #000000;
+  color: #FFFFFF;
+  margin: 0px;
+  border-radius: 0px;
+  border: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+table {
+  width: 100%;
+  height: 100%; }
+  table tr:nth-of-type(odd) {
+    background-color: #D7D7D7; }
+  table tr:nth-of-type(even) {
+    background-color: #FFFFFF; }
+  table td {
+    text-align: center; }
+
+#accordion .ui-icon.iconOpen {
+  background: url("../images/menuButton.png") no-repeat;
+  background-size: 100px;
+  width: 100px;
+  height: 100px; }
+
+#accordion .ui-icon.iconClosed {
+  background: url("../images/menuButton.png") no-repeat;
+  background-size: 100px;
+  width: 100px;
+  height: 100px; }
+
+#accordion .ui-icon {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 100px;
+  height: 100px; }
+
+#headerText {
   font-family: Source-sans;
   color: #FFFFFF;
   font-size: 30pt;
@@ -33,22 +89,98 @@ h1 {
   margin: 0;
   top: 50%;
   margin-top: 20px; }
+  @media screen and (max-height: 900px) {
+    #headerText {
+      margin-top: 0px;
+      font-size: 20pt; } }
+  @media screen and (max-width: 600px) {
+    #headerText {
+      display: none; } }
 
 #nav {
   position: absolute;
-  bottom: 0;
-  margin: 0 auto;
-  text-align: center;
-  min-height: 5%;
+  bottom: 0px;
   width: 100%;
+  min-height: 30px;
   background-color: #FFFFFF;
   border-bottom: 1px solid #D7D7D7; }
-  #nav ul {
-    margin: 0;
-    padding: 0; }
-    #nav ul li {
-      display: inline-block;
-      padding-right: 20px; }
+  @media screen and (max-width: 600px) {
+    #nav {
+      display: none; } }
+
+#menuContainer {
+  position: absolute;
+  bottom: 0;
+  min-height: 200%;
+  width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0; }
+
+#menuItem1, #menuItem2, #menuItem3 {
+  position: absolute;
+  bottom: 0;
+  min-height: 100%;
+  width: 200px; }
+  @media screen and (max-height: 700px) {
+    #menuItem1, #menuItem2, #menuItem3 {
+      min-height: 75%; } }
+
+#menuItem2 {
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0; }
+
+#menuItem3 {
+  right: 0; }
+
+.menuImg {
+  position: absolute;
+  bottom: 50%;
+  width: 100%;
+  min-height: 50%; }
+  @media screen and (max-height: 700px) {
+    .menuImg {
+      min-height: 25%; } }
+
+.menuButtonContainer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  min-height: 50%; }
+
+.menuButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 30px;
+  width: 60px;
+  margin: -15px 0 0 -30px; }
+
+.largeButton {
+  width: 120px;
+  margin: -15px 0 0 -60px; }
+
+button {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  font-size: 14pt; }
+
+.Icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+  @media screen and (max-height: 700px) {
+    .Icon {
+      -moz-transform: scale(0.5);
+      -webkit-transform: scale(0.5);
+      transform: scale(0.5); } }
 
 button {
   background-color: Transparent;
@@ -67,18 +199,27 @@ button {
   width: 60%;
   min-height: 80%;
   background-color: green; }
+  @media screen and (max-width: 600px) {
+    #section1 {
+      width: 85%; } }
 
 #section2 {
   margin: 0 auto;
   width: 60%;
   min-height: 80%;
   background-color: yellow; }
+  @media screen and (max-width: 600px) {
+    #section2 {
+      width: 85%; } }
 
 #section3 {
   margin: 0 auto;
   width: 60%;
   min-height: 75%;
   background-color: red; }
+  @media screen and (max-width: 600px) {
+    #section3 {
+      width: 85%; } }
 
 footer {
   width: 100%;
