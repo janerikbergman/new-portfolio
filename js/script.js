@@ -15,12 +15,18 @@ $(document).ready(function (){
          header: "iconClosed",    // custom icon class
          activeHeader: "iconOpen" // custom icon class
      };
-  
-   $( "#accordion" ).accordion({
+
+  function initAccordion(){
+  $( "#accordion" ).accordion({
       active: false,
       collapsible: true,
       icons: icons
-   });
+  });  
+  } 
+  initAccordion();
+  $('.navButton').on('click', function(){
+      initAccordion(); 
+  })
   
   $(window).resize(function () {
     headerHeight = $("#header").height();
@@ -56,10 +62,6 @@ $(document).ready(function (){
     $(".workButton").prop("disabled", false);
   }
   });
-
-  var distScroll1;
-  var distScroll2;
-  var distScroll3;  
 
   $(".infoButton").click(function() {
     if ($('html, body').is(':animated'))

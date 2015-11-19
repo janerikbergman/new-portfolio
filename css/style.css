@@ -27,7 +27,7 @@ body {
   height: 100%;
   background-color: #000000;
   color: #FFFFFF; }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 601px) {
     #navMobile {
       display: none; } }
 
@@ -36,9 +36,12 @@ body {
   width: 100%; }
 
 #accordion .ui-accordion-content {
-  height: 400px;
+  height: 300px;
   border-radius: 0px;
   padding: 0px; }
+  @media screen and (max-width: 380px) {
+    #accordion .ui-accordion-content {
+      height: 150px; } }
 
 #accordion .ui-accordion-header {
   height: 100%;
@@ -52,6 +55,10 @@ body {
   align-items: center;
   justify-content: center; }
 
+@media screen and (max-width: 320px) {
+  #headerTextMobi {
+    font-size: 10pt; } }
+
 table {
   width: 100%;
   height: 100%; }
@@ -64,22 +71,22 @@ table {
 
 #accordion .ui-icon.iconOpen {
   background: url("../images/menuButton.png") no-repeat;
-  background-size: 100px;
-  width: 100px;
-  height: 100px; }
+  background-size: 50px;
+  width: 50px;
+  height: 50px; }
 
 #accordion .ui-icon.iconClosed {
   background: url("../images/menuButton.png") no-repeat;
-  background-size: 100px;
-  width: 100px;
-  height: 100px; }
+  background-size: 50px;
+  width: 50px;
+  height: 50px; }
 
 #accordion .ui-icon {
   position: absolute;
-  top: 50%;
+  top: 55%;
   transform: translate(0, -50%);
-  width: 100px;
-  height: 100px; }
+  width: 50px;
+  height: 50px; }
 
 #headerText {
   font-family: Source-sans;
@@ -199,7 +206,7 @@ button {
   width: 60%;
   min-height: 80%;
   background-color: green; }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 900px) {
     #section1 {
       width: 85%; } }
 
@@ -208,22 +215,31 @@ button {
   width: 60%;
   min-height: 80%;
   background-color: yellow; }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 900px) {
     #section2 {
       width: 85%; } }
 
 #section3 {
   margin: 0 auto;
   width: 60%;
-  min-height: 75%;
+  min-height: 80%;
   background-color: red; }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 900px) {
     #section3 {
       width: 85%; } }
 
 footer {
   width: 100%;
-  height: 5%;
+  height: 60px;
   background-color: #000000; }
+
+#links {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.footerLink {
+  margin-right: 20px; }
 
 /*# sourceMappingURL=style.css.map */
