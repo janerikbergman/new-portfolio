@@ -1,20 +1,3 @@
-@font-face {
-  font-family: Source-sans;
-  src: url(../fonts/SourceSansPro-Black.woff) format("woff"); }
-* {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
-
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%; }
-
-body {
-  font-family: Helvetica, sans-serif; }
-
 #header {
   position: fixed;
   top: 0px;
@@ -22,71 +5,8 @@ body {
   height: 20%;
   background-color: #000000; }
 
-#navMobile {
-  width: 100%;
-  height: 100%;
-  background-color: #000000;
-  color: #FFFFFF; }
-  @media screen and (min-width: 601px) {
-    #navMobile {
-      display: none; } }
-
-#accordion {
-  height: 100%;
-  width: 100%; }
-
-#accordion .ui-accordion-content {
-  height: 300px;
-  border-radius: 0px;
-  padding: 0px; }
-  @media screen and (max-width: 380px) {
-    #accordion .ui-accordion-content {
-      height: 150px; } }
-
-#accordion .ui-accordion-header {
-  height: 100%;
-  width: 100%;
-  background: #000000;
-  color: #FFFFFF;
-  margin: 0px;
-  border-radius: 0px;
-  border: 0px;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-
-@media screen and (max-width: 320px) {
-  #headerTextMobi {
-    font-size: 10pt; } }
-
-table {
-  width: 100%;
-  height: 100%; }
-  table tr:nth-of-type(odd) {
-    background-color: #D7D7D7; }
-  table tr:nth-of-type(even) {
-    background-color: #FFFFFF; }
-  table td {
-    text-align: center; }
-
-#accordion .ui-icon.iconOpen {
-  background: url("../images/menuButton.png") no-repeat;
-  background-size: 50px;
-  width: 50px;
-  height: 50px; }
-
-#accordion .ui-icon.iconClosed {
-  background: url("../images/menuButton.png") no-repeat;
-  background-size: 50px;
-  width: 50px;
-  height: 50px; }
-
-#accordion .ui-icon {
-  position: absolute;
-  top: 55%;
-  transform: translate(0, -50%);
-  width: 50px;
-  height: 50px; }
+#spacingDiv {
+  height: 20%; }
 
 #headerText {
   font-family: Source-sans;
@@ -179,54 +99,15 @@ button {
   outline: none;
   font-size: 14pt; }
 
-.Icon {
+.icon {
   display: block;
   margin-left: auto;
   margin-right: auto; }
   @media screen and (max-height: 700px) {
-    .Icon {
+    .icon {
       -moz-transform: scale(0.5);
       -webkit-transform: scale(0.5);
       transform: scale(0.5); } }
-
-button {
-  background-color: Transparent;
-  background-repeat: no-repeat;
-  border: none;
-  cursor: pointer;
-  overflow: hidden;
-  outline: none;
-  font-size: 14pt; }
-
-#spacingDiv {
-  height: 20%; }
-
-#section1 {
-  margin: 0 auto;
-  width: 60%;
-  min-height: 80%;
-  background-color: green; }
-  @media screen and (max-width: 900px) {
-    #section1 {
-      width: 85%; } }
-
-#section2 {
-  margin: 0 auto;
-  width: 60%;
-  min-height: 80%;
-  background-color: yellow; }
-  @media screen and (max-width: 900px) {
-    #section2 {
-      width: 85%; } }
-
-#section3 {
-  margin: 0 auto;
-  width: 60%;
-  min-height: 80%;
-  background-color: red; }
-  @media screen and (max-width: 900px) {
-    #section3 {
-      width: 85%; } }
 
 footer {
   width: 100%;
@@ -241,5 +122,103 @@ footer {
 
 .footerLink {
   margin-right: 20px; }
+
+#navMobile {
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  color: #FFFFFF; }
+  @media screen and (min-width: 601px) {
+    #navMobile {
+      display: none; } }
+
+#accordion {
+  height: 100%;
+  width: 100%; }
+
+#accordion .ui-accordion-content {
+  height: 300px;
+  border-radius: 0px;
+  padding: 0px; }
+  @media screen and (max-width: 380px) {
+    #accordion .ui-accordion-content {
+      height: 150px; } }
+
+#accordion .ui-accordion-header {
+  height: 100%;
+  width: 100%;
+  background: #000000;
+  color: #FFFFFF;
+  margin: 0px;
+  border-radius: 0px;
+  border: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+@media screen and (max-width: 320px) {
+  #headerTextMobi {
+    font-size: 10pt; } }
+
+table {
+  width: 100%;
+  height: 100%; }
+  table tr:nth-of-type(odd) {
+    background-color: #D7D7D7; }
+  table tr:nth-of-type(even) {
+    background-color: #FFFFFF; }
+  table td {
+    text-align: center; }
+
+#accordion .ui-icon.iconOpen {
+  background: url("../images/menuButton.png") no-repeat;
+  background-size: 50px;
+  width: 50px;
+  height: 50px; }
+
+#accordion .ui-icon.iconClosed {
+  background: url("../images/menuButton.png") no-repeat;
+  background-size: 50px;
+  width: 50px;
+  height: 50px; }
+
+#accordion .ui-icon {
+  position: absolute;
+  top: 55%;
+  transform: translate(0, -50%);
+  width: 50px;
+  height: 50px; }
+
+@font-face {
+  font-family: Source-sans;
+  src: url(../fonts/SourceSansPro-Black.woff) format("woff"); }
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%; }
+
+body {
+  font-family: Helvetica, sans-serif; }
+
+#section1, #section2, #section3 {
+  margin: 0 auto;
+  width: 60%;
+  min-height: 80%;
+  background-color: green; }
+  @media screen and (max-width: 900px) {
+    #section1, #section2, #section3 {
+      width: 85%; } }
+
+#section2 {
+  background-color: yellow; }
+
+#section3 {
+  background-color: red; }
 
 /*# sourceMappingURL=style.css.map */

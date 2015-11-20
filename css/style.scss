@@ -3,7 +3,8 @@ $white: #FFFFFF;
 $grey: #D7D7D7;
 $font-stack: Helvetica, sans-serif;
 $font-size-normal: 14pt;
-$navPadding: 20px;
+
+@import "header", "footer", "mobileHeader";
 
 @font-face {
     font-family: Source-sans;
@@ -27,228 +28,6 @@ body {
   font-family: $font-stack;
 }
 
-#header{
-  position: fixed;
-  top: 0px;
-  width: 100%;
-  height: 20%;
-  background-color: $black;
-}
-
-#navMobile{
-  width: 100%;
-  height: 100%;
-  background-color: $black;
-  color: $white;
-  @media screen and (min-width: 601px){
-     display: none;
-  }
-}
-
-#accordion{
-   height: 100%;
-   width: 100%;
-}
-
-#accordion .ui-accordion-content{
-  height: 300px;
-  border-radius: 0px;
-  padding: 0px;
-  @media screen and (max-width: 380px){
-     height: 150px;
-  }
-}
-
-#accordion .ui-accordion-header {
-    height: 100%;
-    width: 100%;
-    background: $black;
-    color: $white;
-    margin: 0px;
-    border-radius: 0px;
-    border: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#headerTextMobi{
-  @media screen and (max-width: 320px){
-     font-size: 10pt;
-  }
-}
-
-table {
-  width: 100%;
-  height:100%;
-  tr:nth-of-type(odd){
-    background-color: $grey;
-  }
-  tr:nth-of-type(even) {
-    background-color: $white;
-  }
-  td {
-    text-align: center;
-  }
-}
-
-#accordion .ui-icon.iconOpen {
-    background: url("../images/menuButton.png") no-repeat;
-    background-size: 50px;
-    width: 50px;
-    height: 50px;
-}
-#accordion .ui-icon.iconClosed {
-    background: url("../images/menuButton.png") no-repeat;
-    background-size: 50px;
-    width: 50px;
-    height: 50px;
-}
-
-#accordion .ui-icon{
-  position: absolute;
-  top: 55%;
-  transform: translate(0, -50%);
-  width: 50px;
-  height: 50px; 
-}
- 
-
-#headerText{
-  font-family: Source-sans;
-  color: $white;
-  font-size: 30pt;
-  text-align:center;
-  margin: 0;
-  top: 50%;
-  margin-top: 20px;
-  @media screen and (max-height: 900px){
-     margin-top: 0px;
-     font-size: 20pt;
-  }
-  @media screen and (max-width: 600px){
-     display: none;
-  }
-}
-
-// Uusi nav alkaa
-
-#nav{
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
-  min-height: 30px;
-  background-color: $white;
-  border-bottom: 1px solid $grey;
-  @media screen and (max-width: 600px){
-     display: none;
-  }
-}
-
-#menuContainer {
-  position: absolute;
-  bottom: 0;
-  min-height: 200%;
-  width: 550px;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-}
-
-#menuItem1, #menuItem2, #menuItem3 {
-  position: absolute;
-  bottom: 0;
-  min-height: 100%;
-  width: 200px;
-  @media screen and(max-height: 700px)
-  {
-    min-height: 75%;
-  }
-}
-
-#menuItem2{
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-}
-
-#menuItem3{
-  right: 0;
-}
-
-.menuImg {
-  position: absolute;
-  bottom: 50%;
-  width: 100%;
-  min-height: 50%;
-   @media screen and(max-height: 700px)
-  {
-    min-height: 25%;
-  }
-}
-
-.menuButtonContainer {
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
-  min-height: 50%;
-}
-
-.menuButton {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  height: 30px;
-  width: 60px;
-  margin: -15px 0 0 -30px;
-}
-
-.largeButton{
-  width: 120px;
-  margin: -15px 0 0 -60px;
-}
-
-button {
-    background-color: Transparent;
-    background-repeat:no-repeat;
-    border: none;
-    cursor:pointer;
-    overflow: hidden;
-    outline:none;
-    font-size: 14pt;
-}
-
-.Icon {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  @media screen and(max-height: 700px)
-  {
-    -moz-transform:scale(0.5);
-    -webkit-transform:scale(0.5);
-    transform:scale(0.5);
-  }
-}
-
-// Uusi nav loppuu
-
-button {
-    background-color: Transparent;
-    background-repeat:no-repeat;
-    border: none;
-    cursor:pointer;
-    overflow: hidden;
-    outline:none;
-    font-size: 14pt;
-}
-    
-#spacingDiv {
-  height: 20%;
-}
-
-
 #section1{
   margin: 0 auto;
   width: 60%;
@@ -260,38 +39,11 @@ button {
 }
 
 #section2{
-  margin: 0 auto;
-  width: 60%;
-  min-height: 80%;
+  @extend #section1;
   background-color: yellow;
-  @media screen and (max-width: 900px){
-     width: 85%;
-  }
 }
 
 #section3{
-  margin: 0 auto;
-  width: 60%;
-  min-height: 80%;
+  @extend #section1;
   background-color: red;
-  @media screen and (max-width: 900px){
-     width: 85%;
-  }
-}
-
-footer {
-  width: 100%;
-  height: 60px;
-  background-color: $black;
-}
-
-#links {
-  min-height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;  
-}
-
-.footerLink{
-  margin-right: 20px;
 }
