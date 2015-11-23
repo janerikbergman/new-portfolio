@@ -133,10 +133,16 @@ footer {
 @media screen and (max-width: 670px) {
   #header {
     height: 10%; } }
+@media screen and (orientation: landscape) {
+  #header {
+    height: 20%; } }
 
 @media screen and (max-width: 670px) {
   #spacingDiv {
     height: 10%; } }
+@media screen and (orientation: landscape) {
+  #spacingDiv {
+    height: 20%; } }
 
 #navMobile {
   width: 100%;
@@ -190,10 +196,16 @@ table {
 
 #accordion .ui-icon.iconOpen {
   background: url("../images/menuButtonClose.png") no-repeat;
-  background-size: 50px;
-  width: 50px;
-  height: 50px; }
+  background-size: 40px;
+  width: 40px;
+  height: 40px; }
   @media screen and (max-width: 360px) {
+    #accordion .ui-icon.iconOpen {
+      background: url("../images/menuButtonCloseSmall.png") no-repeat;
+      background-size: 25px;
+      width: 25px;
+      height: 25px; } }
+  @media screen and (orientation: landscape) {
     #accordion .ui-icon.iconOpen {
       background: url("../images/menuButtonCloseSmall.png") no-repeat;
       background-size: 25px;
@@ -202,10 +214,16 @@ table {
 
 #accordion .ui-icon.iconClosed {
   background: url("../images/menuButton.png") no-repeat;
-  background-size: 50px;
-  width: 50px;
-  height: 50px; }
+  background-size: 40px;
+  width: 40px;
+  height: 40px; }
   @media screen and (max-width: 360px) {
+    #accordion .ui-icon.iconClosed {
+      background: url("../images/menuButtonSmall.png") no-repeat;
+      background-size: 25px;
+      width: 25px;
+      height: 25px; } }
+  @media screen and (orientation: landscape) {
     #accordion .ui-icon.iconClosed {
       background: url("../images/menuButtonSmall.png") no-repeat;
       background-size: 25px;
@@ -216,8 +234,8 @@ table {
   position: absolute;
   top: 55%;
   transform: translate(0, -50%);
-  width: 50px;
-  height: 50px; }
+  width: 40px;
+  height: 40px; }
 
 @font-face {
   font-family: Source-sans;

@@ -6,12 +6,18 @@ $grey: #D7D7D7;
   @media screen and (max-width: 670px){
      height: 10%;
   }
+  @media screen and (orientation:landscape) {
+     height: 20%;
+ }
 }
 
 #spacingDiv {
   @media screen and (max-width: 670px){
     height: 10%;
   }
+  @media screen and (orientation:landscape) {
+     height: 20%;
+ }
 }
 
 #navMobile{
@@ -76,10 +82,16 @@ table {
 
 #accordion .ui-icon.iconOpen {
     background: url("../images/menuButtonClose.png") no-repeat;
-    background-size: 50px;
-    width: 50px;
-    height: 50px;
+    background-size: 40px;
+    width: 40px;
+    height: 40px;
     @media screen and (max-width: 360px){
+        background: url("../images/menuButtonCloseSmall.png") no-repeat;
+        background-size: 25px;
+        width: 25px;
+        height: 25px;
+    }
+    @media screen and (orientation:landscape) {
         background: url("../images/menuButtonCloseSmall.png") no-repeat;
         background-size: 25px;
         width: 25px;
@@ -88,10 +100,16 @@ table {
 }
 #accordion .ui-icon.iconClosed {
     background: url("../images/menuButton.png") no-repeat;
-    background-size: 50px;
-    width: 50px;
-    height: 50px;
+    background-size: 40px;
+    width: 40px;
+    height: 40px;
     @media screen and (max-width: 360px){
+        background: url("../images/menuButtonSmall.png") no-repeat;
+        background-size: 25px;
+        width: 25px;
+        height: 25px;
+    }
+     @media screen and (orientation:landscape) {
         background: url("../images/menuButtonSmall.png") no-repeat;
         background-size: 25px;
         width: 25px;
@@ -103,6 +121,6 @@ table {
   position: absolute;
   top: 55%;
   transform: translate(0, -50%);
-  width: 50px;
-  height: 50px; 
+  width: 40px;
+  height: 40px; 
 }
