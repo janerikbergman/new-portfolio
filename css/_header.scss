@@ -82,7 +82,7 @@ $grey: #D7D7D7;
   bottom: 50%;
   width: 100%;
   min-height: 50%;
-   @media screen and(max-height: 700px)
+  @media screen and(max-height: 700px)
   {
     min-height: 25%;
   }
@@ -134,5 +134,9 @@ button {
     -moz-transform:scale(0.5);
     -webkit-transform:scale(0.5);
     transform:scale(0.5);
+  }
+  @media screen and(max-height: 600px)
+  {
+    display: none;
   }
 }

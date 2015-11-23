@@ -115,6 +115,9 @@ button {
       -moz-transform: scale(0.5);
       -webkit-transform: scale(0.5);
       transform: scale(0.5); } }
+  @media screen and (max-height: 600px) {
+    .icon {
+      display: none; } }
 
 footer {
   width: 100%;
