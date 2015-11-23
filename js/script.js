@@ -7,13 +7,9 @@ $(document).ready(function (){
   var section2ScrollTop = Math.round($("#section2").offset().top)-headerHeight;
   var section3ScrollTop = Math.round($("#section3").offset().top)-headerHeight;
 
-  //alert(Math.round($("#section1").offset().top)-headerHeight +" "+ $(document).scrollTop());
-  //alert(Math.round($("#section2").offset().top)-headerHeight +" "+ $(document).scrollTop());
-  //alert(Math.round($("#section3").offset().top)-headerHeight +" "+ $(document).scrollTop());
-  
   var icons = {
-         header: "iconClosed",    // custom icon class
-         activeHeader: "iconOpen" // custom icon class
+         header: "iconClosed",
+         activeHeader: "iconOpen" 
      };
 
   function initAccordion(){
@@ -101,5 +97,29 @@ $(document).ready(function (){
       }, 800);
     }
   });
+  
+  $('.fancybox-buttons').fancybox({
+				openEffect  : 'none',
+				closeEffect : 'none',
+
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : true,
+        
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+          overlay: {
+            locked: false
+          },
+					buttons	: {}
+				},
+
+				afterLoad : function() {
+					this.title = 'Kuva ' + (this.index + 1) + ' / ' + this.group.length + (this.title ? ' - ' + this.title : '');
+				}
+			});
   
 });
