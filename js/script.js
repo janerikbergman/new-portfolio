@@ -1,7 +1,7 @@
 // JavaScript Document
 $(document).ready(function (){
   
-  $('meta[name=viewport]').attr('content','width='+$(window).width()+',user-scalable=no');
+  //$('meta[name=viewport]').attr('content','width='+$(window).width()+',user-scalable=no');
 
   var headerHeight = $("#header").height();
   var documentScrollTop = $(document).scrollTop();
