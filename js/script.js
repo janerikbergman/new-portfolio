@@ -1,7 +1,5 @@
 // JavaScript Document
 $(document).ready(function (){
-  
-  //$('meta[name=viewport]').attr('content','width='+$(window).width()+',user-scalable=no');
 
   var headerHeight = $("#header").height();
   var documentScrollTop = $(document).scrollTop();
@@ -22,9 +20,10 @@ $(document).ready(function (){
   });  
   } 
   initAccordion();
-  $('.navButton').on('click', function(){
+  
+  $(".navButton").on("click", function(){
       initAccordion(); 
-  })
+  });
   
   $(window).resize(function () {
     headerHeight = $("#header").height();
@@ -62,56 +61,56 @@ $(document).ready(function (){
   });
 
   $(".infoButton").click(function() {
-    if ($('html, body').is(':animated'))
+    if ($("html, body").is(":animated"))
     {
       return false;
     }
     else
     {
-      $('html, body').animate({
+      $("html, body").animate({
           scrollTop: Math.round($("#section1").offset().top) - $("#header").height()
       }, 800);
     }
   });
     
   $(".educationButton").click(function() {
-    if ($('html, body').is(':animated'))
+    if ($("html, body").is(":animated"))
     {
       return false;
     }
     else
     {
-      $('html, body').animate({
+      $("html, body").animate({
           scrollTop: Math.round($("#section2").offset().top) - $("#header").height()
       }, 800);
     }
   });
   
   $(".workButton").click(function() {
-    if ($('html, body').is(':animated'))
+    if ($("html, body").is(":animated"))
     {
       return false;
     }
     else
     {   
-      $('html, body').animate({ 
+      $("html, body").animate({ 
         scrollTop:  Math.round($("#section3").offset().top) - $("#header").height()                     
       }, 800);
     }
   });
   
-  $('.fancybox-buttons').fancybox({
-				openEffect  : 'none',
-				closeEffect : 'none',
+  $(".fancybox-buttons").fancybox({
+				openEffect  : "none",
+				closeEffect : "none",
 
-				prevEffect : 'none',
-				nextEffect : 'none',
+				prevEffect : "none",
+				nextEffect : "none",
 
 				closeBtn  : true,
         
 				helpers : {
 					title : {
-						type : 'inside'
+						type : "inside"
 					},
           overlay: {
             locked: false
@@ -120,7 +119,7 @@ $(document).ready(function (){
 				},
 
 				afterLoad : function() {
-					this.title = 'Kuva ' + (this.index + 1) + ' / ' + this.group.length + (this.title ? ' - ' + this.title : '');
+					this.title = "Kuva " + (this.index + 1) + " / " + this.group.length + (this.title ? " - " + this.title : "");
 				}
 			});
   
