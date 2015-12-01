@@ -144,3 +144,17 @@ button {
     display: none;
   }
 }
+
+#languageButton{
+  position: relative;
+  height: 30px;
+  left: 75%;
+  @media screen and(max-width: 1200px)
+  {
+    left: 85%;
+  }
+  @media screen and(max-width: 750px)
+  {
+    left: 87%;
+  }
+}

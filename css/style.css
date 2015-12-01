@@ -122,6 +122,17 @@ button {
     .icon {
       display: none; } }
 
+#languageButton {
+  position: relative;
+  height: 30px;
+  left: 75%; }
+  @media screen and (max-width: 1200px) {
+    #languageButton {
+      left: 85%; } }
+  @media screen and (max-width: 750px) {
+    #languageButton {
+      left: 87%; } }
+
 footer {
   width: 100%;
   height: 60px;
@@ -275,7 +286,7 @@ body {
   width: 60%;
   min-height: 80%;
   background-color: #FFFFFF; }
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1000px) {
     #section1, #section2, #section3 {
       width: 90%; } }
   @media screen and (max-width: 670px) {
@@ -308,9 +319,12 @@ hr {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
 
 #skillTable {
-  width: 100%;
-  margin: 0 auto;
+  width: 80%;
   border-spacing: 0; }
+  @media screen and (max-width: 1500px) {
+    #skillTable {
+      width: 100%;
+      margin: 0 auto; } }
   @media screen and (max-width: 495px) {
     #skillTable img {
       -moz-transform: scale(0.75);
@@ -345,8 +359,12 @@ hr {
   position: absolute;
   top: 0;
   left: 0;
-  width: 75%;
-  height: 75%; }
+  width: 70%;
+  height: 70%; }
+  @media screen and (max-width: 1000px) {
+    .videoWrapper iframe {
+      width: 80%;
+      height: 80%; } }
 
 .contentSection {
   width: 80%;
