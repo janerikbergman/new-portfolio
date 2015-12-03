@@ -1,9 +1,13 @@
 $black: #000000;
 $white: #FFFFFF;
 $grey: #D7D7D7;
+$break-smaller: 670px;
+$break-tiny: 380px;
+$break-tinier: 320px;
+$break-icon-small: 360px;
 
 #header{
-  @media screen and (max-width: 670px){
+  @media screen and (max-width: $break-smaller){
      height: 10%;
   }
   @media screen and (orientation:landscape) {
@@ -12,7 +16,7 @@ $grey: #D7D7D7;
 }
 
 #spacingDiv {
-  @media screen and (max-width: 670px){
+  @media screen and (max-width: $break-smaller){
     height: 10%;
   }
   @media screen and (orientation:landscape) {
@@ -25,8 +29,15 @@ $grey: #D7D7D7;
   height: 100%;
   background-color: $black;
   color: $white;
-  @media screen and (min-width: 670px){
+  @media screen and (min-width: $break-smaller){
      display: none;
+  }
+}
+
+#languageButtonMobile {
+  @media screen and(min-width: $break-smaller)
+  {
+    display: none;
   }
 }
 
@@ -36,14 +47,14 @@ $grey: #D7D7D7;
 }
 
 #accordion .ui-accordion-content{
-  height: 200px;
+  height: 250px;
   border-radius: 0px;
   padding: 0px;
-  @media screen and (max-width: 380px){
-     height: 150px;
+  @media screen and (max-width: $break-tiny){
+     height: 200px;
   }
-  @media screen and (max-height: 320px){
-     height: 150px;
+  @media screen and (max-height: $break-tinier){
+     height: 200px;
   }
 }
 
@@ -61,7 +72,7 @@ $grey: #D7D7D7;
 }
 
 #headerTextMobi{
-  @media screen and (max-width: 320px){
+  @media screen and (max-width: $break-tinier){
      font-size: 10pt;
   }
 }
@@ -85,7 +96,7 @@ table {
     background-size: 40px;
     width: 40px;
     height: 40px;
-    @media screen and (max-width: 360px){
+    @media screen and (max-width: $break-icon-small){
         background: url("../images/menuButtonCloseSmall.png") no-repeat;
         background-size: 25px;
         width: 25px;
@@ -103,7 +114,7 @@ table {
     background-size: 40px;
     width: 40px;
     height: 40px;
-    @media screen and (max-width: 360px){
+    @media screen and (max-width: $break-icon-small){
         background: url("../images/menuButtonSmall.png") no-repeat;
         background-size: 25px;
         width: 25px;

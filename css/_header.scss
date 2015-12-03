@@ -1,6 +1,12 @@
 $black: #000000;
 $white: #FFFFFF;
 $grey: #D7D7D7;
+$break-hide-heading: 900px;
+$break-small: 700px;
+$break-smaller: 670px;
+$break-icon-hide: 600px;
+$break-language-button-large: 1200px;
+$break-language-button-small: 750px;
 
 #header{
   position: fixed;
@@ -23,11 +29,11 @@ $grey: #D7D7D7;
   margin: 0;
   top: 50%;
   margin-top: 20px;
-  @media screen and (max-height: 900px){
+  @media screen and (max-height: $break-hide-heading){
      margin-top: 0px;
      font-size: 20pt;
   }
-  @media screen and (max-width: 670px){
+  @media screen and (max-width: $break-smaller){
      display: none;
   }
 }
@@ -39,7 +45,7 @@ $grey: #D7D7D7;
   min-height: 30px;
   background-color: $white;
   border-bottom: 1px solid $grey;
-  @media screen and (max-width: 670px){
+  @media screen and (max-width: $break-smaller){
      display: none;
   }
 }
@@ -60,7 +66,7 @@ $grey: #D7D7D7;
   bottom: 0;
   min-height: 100%;
   width: 200px;
-  @media screen and(max-height: 700px)
+  @media screen and(max-height: $break-small)
   {
     min-height: 75%;
   }
@@ -82,7 +88,7 @@ $grey: #D7D7D7;
   bottom: 50%;
   width: 100%;
   min-height: 50%;
-  @media screen and(max-height: 700px)
+  @media screen and(max-height: $break-small)
   {
     min-height: 25%;
   }
@@ -102,7 +108,7 @@ $grey: #D7D7D7;
   height: 30px;
   width: 60px;
   margin: -15px 0 0 -30px;
-  @media screen and(max-height: 700px)
+  @media screen and(max-height: $break-small)
   {
     top: 25%;
   }
@@ -133,13 +139,13 @@ button {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  @media screen and(max-height: 700px)
+  @media screen and(max-height: $break-small)
   {
     -moz-transform:scale(0.5);
     -webkit-transform:scale(0.5);
     transform:scale(0.5);
   }
-  @media screen and(max-height: 600px)
+  @media screen and(max-height: $break-icon-hide)
   {
     display: none;
   }
@@ -149,12 +155,16 @@ button {
   position: relative;
   height: 30px;
   left: 75%;
-  @media screen and(max-width: 1200px)
+  @media screen and(max-width: $break-language-button-large)
   {
     left: 85%;
   }
-  @media screen and(max-width: 750px)
+  @media screen and(max-width: $break-language-button-small)
   {
     left: 87%;
+  }
+  @media screen and(max-width: $break-smaller)
+  {
+    display: none;
   }
 }

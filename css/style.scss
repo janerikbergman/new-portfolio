@@ -3,6 +3,14 @@ $white: #FFFFFF;
 $grey: #D7D7D7;
 $font-stack: Helvetica, sans-serif;
 $font-size-normal: 14pt;
+$smaller-font-break: 400px;
+$break-small: 700px;
+$break-smaller: 670px;
+$break-smallest: 495px;
+$break-medium: 1000px;
+$break-large: 1280px;
+$break-larger: 1500px;
+$break-largest: 1600px;
 
 @import "header", "footer", "mobileHeader";
 
@@ -28,10 +36,10 @@ body {
   font-family: $font-stack;
   font-size: $font-size-normal;
   background-color: #F5F5F5;
-  @media screen and (max-width: 400px){
+  @media screen and (max-width: $smaller-font-break){
      font-size: 11pt;
   }
-  @media screen and (max-width: 700px){
+  @media screen and (max-width: $break-small){
      background-color: $white;
   }
 }
@@ -43,10 +51,10 @@ body {
   width: 60%;
   min-height: 80%;
   background-color: $white;
-  @media screen and (max-width: 1000px){
+  @media screen and (max-width: $break-medium){
      width: 90%;
   }
-  @media screen and (max-width: 670px){
+  @media screen and (max-width: $break-smaller){
      min-height: 90%;
   }
 }
@@ -90,12 +98,12 @@ hr {
 #skillTable {
   width: 80%;
   border-spacing: 0;
-  @media screen and (max-width: 1500px){
+  @media screen and (max-width: $break-larger){
     width: 100%;
     margin: 0 auto; 
   }
   img {
-    @media screen and (max-width: 495px){
+    @media screen and (max-width: $break-smallest){
       -moz-transform:scale(0.75);
       -webkit-transform:scale(0.75);
       transform:scale(0.75);
@@ -117,7 +125,7 @@ hr {
 .contentContainer {
   width: 70%;
   margin: 0 auto;
-  @media screen and (max-width: 1000px){
+  @media screen and (max-width: $break-medium){
      width: 90%;
   }
 }
@@ -126,22 +134,28 @@ hr {
   text-align: center;
 }
 
-.videoWrapper {
-	position: relative;
-	padding-bottom: 56.25%;
-	padding-top: 25px;
-	height: 0;
+.videoContainer {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+ 
+.videoContainer iframe,
+.videoContainer object,
+.videoContainer embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
-.videoWrapper iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 70%;
-	height: 70%;
-  @media screen and (max-width: 1000px){
-     width: 80%;
-     height: 80%;
+#videoArea {
+  height: 75%;
+  width: 75%;
+  @media screen and (max-width: $break-medium){
+     width: 90%;
+     height: 90%;
   }
 }
 
@@ -149,7 +163,7 @@ hr {
   width: 80%;
   margin: 0 auto;
   overflow: hidden;
-  @media screen and (max-width: 700px){
+  @media screen and (max-width: $break-small){
      width: 100%;
   }
 }
@@ -163,7 +177,7 @@ hr {
 #gallery {
   width: 80%;
   margin-bottom: 50px;
-  @media screen and (max-width: 1600px){
+  @media screen and (max-width: $break-largest){
      width: 100%;
   }
 }
@@ -171,13 +185,13 @@ hr {
 .galleryImg {
   max-width: 60%;
   height: auto;
-  @media screen and (max-width: 1280px){
+  @media screen and (max-width: $break-large){
      max-width: 80%;
   }
 }
 
 .hideImg{
-   @media screen and (max-width: 1280px){
+   @media screen and (max-width: $break-large){
      display: none;
   }
 }

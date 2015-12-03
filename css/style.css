@@ -132,6 +132,9 @@ button {
   @media screen and (max-width: 750px) {
     #languageButton {
       left: 87%; } }
+  @media screen and (max-width: 670px) {
+    #languageButton {
+      display: none; } }
 
 footer {
   width: 100%;
@@ -170,20 +173,24 @@ footer {
     #navMobile {
       display: none; } }
 
+@media screen and (min-width: 670px) {
+  #languageButtonMobile {
+    display: none; } }
+
 #accordion {
   height: 100%;
   width: 100%; }
 
 #accordion .ui-accordion-content {
-  height: 200px;
+  height: 250px;
   border-radius: 0px;
   padding: 0px; }
   @media screen and (max-width: 380px) {
     #accordion .ui-accordion-content {
-      height: 150px; } }
+      height: 200px; } }
   @media screen and (max-height: 320px) {
     #accordion .ui-accordion-content {
-      height: 150px; } }
+      height: 200px; } }
 
 #accordion .ui-accordion-header {
   height: 100%;
@@ -349,22 +356,29 @@ hr {
 #infoHeading {
   text-align: center; }
 
-.videoWrapper {
+.videoContainer {
   position: relative;
   padding-bottom: 56.25%;
-  padding-top: 25px;
-  height: 0; }
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden; }
 
-.videoWrapper iframe {
+.videoContainer iframe,
+.videoContainer object,
+.videoContainer embed {
   position: absolute;
   top: 0;
   left: 0;
-  width: 70%;
-  height: 70%; }
+  width: 100%;
+  height: 100%; }
+
+#videoArea {
+  height: 75%;
+  width: 75%; }
   @media screen and (max-width: 1000px) {
-    .videoWrapper iframe {
-      width: 80%;
-      height: 80%; } }
+    #videoArea {
+      width: 90%;
+      height: 90%; } }
 
 .contentSection {
   width: 80%;
