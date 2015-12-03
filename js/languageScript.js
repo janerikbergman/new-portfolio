@@ -16,11 +16,32 @@ angular.module("translationApp", [])
   
   $scope.sections = [];
   $scope.texts = [];
-  
-  var countPartials = $scope.partials.length;
-  var countTexts = $scope.text.length;   
 
-  $scope.flag = true;
+  var countPartials = $scope.partials.length;
+  var countTexts = $scope.text.length;
+  
+  function localStorageTest(){
+    var test = "test";
+    try {
+        localStorage.setItem("test", test);
+        localStorage.removeItem("test");
+        return true;
+    } catch(e) {
+        return false;
+    }
+  }
+  
+  if(localStorageTest() === true){
+    if(localStorage.getItem("portfolioLanguage") !== null)
+    {
+      $scope.flag = JSON.parse(localStorage.getItem("portfolioLanguage"));
+    } else
+    {
+      $scope.flag = true;
+    }
+  }else{
+      $scope.flag = true;
+  }
 
   $scope.getContent = function(){
     if($scope.flag===true)
@@ -31,7 +52,6 @@ angular.module("translationApp", [])
         for(i = 0; i<countTexts; i++){
           $scope.texts[i] = $scope.text[i].fin;
         }
-        $scope.flag = false;
     }
     else if($scope.flag===false)
     {
@@ -41,13 +61,22 @@ angular.module("translationApp", [])
         for(i = 0; i<countTexts; i++){
           $scope.texts[i] = $scope.text[i].en;
         }
-        $scope.flag = true;
+    }
+    if(localStorageTest() === true){
+        localStorage.setItem("portfolioLanguage", $scope.flag);
     }
   }
   
   $scope.getContent();
   
   $scope.changeContent = function(){
-      $scope.getContent();      
+      if($scope.flag===true)
+      {
+        $scope.flag = false;
+      } else if($scope.flag===false)
+      {
+        $scope.flag = true;
+      } 
+      $scope.getContent();     
   }
 }]);
