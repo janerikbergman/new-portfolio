@@ -1,6 +1,23 @@
 // JavaScript Document
-angular.module("translationApp", [])
-.controller("translationCtrl", ["$scope", function($scope) {
+var app = angular.module("translationApp", []);
+
+app.factory("localStorageFactory", function localStorageFactory() {
+  var localStorageFactory = {};
+  
+  localStorageFactory.isStorageAvailable = function(){
+    var test = "test";
+    try {
+        localStorage.setItem("test", test);
+        localStorage.removeItem("test");
+        return true;
+    } catch(e) {
+        return false;
+    }
+  }
+  return localStorageFactory;
+});
+
+app.controller("translationCtrl", ["$scope", "localStorageFactory", function($scope, localStorageFactory) {
   $scope.partials = 
     [ { fin: "./partials/info_fi.html", en: "./partials/info_en.html"},
       { fin: "./partials/education_fi.html", en: "./partials/education_en.html"},
@@ -20,18 +37,9 @@ angular.module("translationApp", [])
   var countPartials = $scope.partials.length;
   var countTexts = $scope.text.length;
   
-  function localStorageTest(){
-    var test = "test";
-    try {
-        localStorage.setItem("test", test);
-        localStorage.removeItem("test");
-        return true;
-    } catch(e) {
-        return false;
-    }
-  }
+  var isStorageAvailable = localStorageFactory.isStorageAvailable();
   
-  if(localStorageTest() === true){
+  if(isStorageAvailable === true){
     if(localStorage.getItem("portfolioLanguage") !== null)
     {
       $scope.flag = JSON.parse(localStorage.getItem("portfolioLanguage"));
@@ -62,7 +70,7 @@ angular.module("translationApp", [])
           $scope.texts[i] = $scope.text[i].en;
         }
     }
-    if(localStorageTest() === true){
+    if(isStorageAvailable === true){
         localStorage.setItem("portfolioLanguage", $scope.flag);
     }
   }
