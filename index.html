@@ -32,21 +32,26 @@
   <h1 id="headerTextMobi">Portfolio - Jan-Erik Bergman</h1>
   <div>
     <table>
-    <tr>
-    <td>
-    <button class="infoButton navButton">Tietoa</button>
-    </td>
-    </tr>
-    <tr>
-    <td>
-    <button class="educationButton navButton">Koulutus</button>
-    </td>
-    </tr>
-     <tr>
-     <td>
-    <button class="workButton navButton">Työnäytteet</button>
-    </td>
-    </tr>
+      <tr>
+        <td>
+          <button class="infoButton navButton" ng-bind="texts[0]"></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button class="educationButton navButton" ng-bind="texts[1]"></button>
+        </td>
+      </tr>
+      <tr>
+         <td>
+          <button class="workButton navButton" ng-bind="texts[2]"></button> 
+        </td>
+      </tr>
+      <tr>
+         <td>
+          <button id="languageButtonMobile" class="navButton" ng-click="changeContent()" ng-bind="texts[5]"></button>
+        </td>
+      </tr>
     </table>
   </div>
   </div>
@@ -75,6 +80,7 @@
     <div class="contentStart"><hr><img class="contentIcon" width="40" height="40" src="./images/nes_icon_small.png" alt="nes-controller icon" /></div>
     <div class="contentSection" ng-include="sections[0]">
     </div>
+    <div class="contentEnd"></div>
   </div>
   <div id="section2">
     <div class="contentStart"><hr><img class="contentIcon" width="40" height="40" src="./images/n64_icon_small.png" alt="nes-controller icon" /></div>
@@ -212,9 +218,12 @@
     <div class="contentStart"><hr><img class="contentIcon" width="40" height="40" src="./images/gc_icon_small.png" alt="nes-controller icon" /></div>
     <div class="contentSection">
       <div  ng-include="sections[2]"></div>
-      <div class="videoWrapper">           
+      <div id="videoArea">
+      <div class="videoContainer">          
         <iframe id="gyro" width="560" height="315" src="https://www.youtube.com/embed/b83oBzulbKE" frameborder="0" allowfullscreen></iframe>
       </div>
+    </div>
+    <div class="contentEnd"></div>
     </div>
     <div class="contentSection"  ng-include="sections[3]">
     </div>
