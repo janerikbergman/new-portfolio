@@ -21,15 +21,20 @@ app.controller("translationCtrl", ["$scope", "localStorageFactory", function($sc
   $scope.partials = 
     [ { fin: "./partials/info_fi.html", en: "./partials/info_en.html"},
       { fin: "./partials/education_fi.html", en: "./partials/education_en.html"},
-      { fin: "./partials/work_fi.html", en: "./partials/work_en.html"},
-      { fin: "./partials/project_fi.html", en: "./partials/project_en.html"}, ];
+      { fin: "./partials/work1_fi.html", en: "./partials/work1_en.html"},
+      { fin: "./partials/work2_fi.html", en: "./partials/work2_en.html"},
+      { fin: "./partials/project_fi.html", en: "./partials/project_en.html"} ];
   
   $scope.text = [{ fin: "Tietoa", en: "About Me"},
       { fin: "Koulutus", en: "Education"},
       { fin: "Työnäytteet", en: "Work"},
       { fin: "Taidot", en: "Skills"},
       { fin: "RESPONSIIVISUUS", en: "RESPONSIVE DESIGN"},
-      { fin: "English", en: "Suomi"}];
+      { fin: "English", en: "Suomi"},
+      { fin: "Virtuaalimuseo etusivu", en: "Virtual museum front page"},
+      { fin: "Virtuaalimuseo taiteilijasivu", en: "Virtual museum artist page"},
+      { fin: "Virtuaalimuseo teosluettelo", en: "Virtual museum catalogue"},
+      { fin: "Virtuaalimuseo teossivu", en: "Virtual museum artwork page"}];
   
   $scope.sections = [];
   $scope.texts = [];
