@@ -163,7 +163,7 @@
             <td>BOOTSTRAP</td>
             <td>
                 <img src="images/heart_small.png" height="27" width="30" alt="heart">
-                <img src="images/hearthalf_small.png" height="27" width="30" alt="heart">
+                <img src="images/heart_small.png" height="27" width="30" alt="heart">
                 <img src="images/heartempty_small.png" height="27" width="30" alt="heart">
                 <img src="images/heartempty_small.png" height="27" width="30" alt="heart">
                 <img src="images/heartempty_small.png" height="27" width="30" alt="heart">
@@ -218,6 +218,13 @@
     <div class="contentStart"><hr><img class="contentIcon" width="40" height="40" src="./images/gc_icon_small.png" alt="nes-controller icon" /></div>
     <div class="contentSection">
       <div  ng-include="sections[2]"></div>
+      <div id="gallery">
+        <a class="fancybox-buttons" data-fancybox-group="button" href="./images/virtuaalimuseo/etusivu_big.png" ng-attr-title="{{texts[6]}}"><img src="./images/virtuaalimuseo/etusivu_thumb.png" class="galleryImg" alt="{{texts[6]}}" width="300" height="169" /></a>
+        <a class="fancybox-buttons" data-fancybox-group="button" href="./images/virtuaalimuseo/taiteilijasivu_big.png" ng-attr-title="{{texts[7]}}"><img src="./images/virtuaalimuseo/taiteilijasivu_thumb.png" class="galleryImg hideImg" alt="{{texts[7]}}" width="300" height="169" /></a>
+        <a class="fancybox-buttons" data-fancybox-group="button" href="./images/virtuaalimuseo/teosluettelo_big.png" ng-attr-title="{{texts[8]}}"><img src="./images/virtuaalimuseo/teosluettelo_thumb.png" class="galleryImg hideImg" alt="{{texts[8]}}" width="300" height="169" /></a>
+        <a class="fancybox-buttons" data-fancybox-group="button" href="./images/virtuaalimuseo/teossivu_big.png" ng-attr-title="{{texts[9]}}"><img src="./images/virtuaalimuseo/teossivu_thumb.png" class="galleryImg hideImg" alt="{{texts[9]}}" width="300" height="169" /></a>
+      </div>
+      <div  ng-include="sections[3]"></div> 
       <div id="videoArea">
       <div class="videoContainer">          
         <iframe id="gyro" width="560" height="315" src="https://www.youtube.com/embed/b83oBzulbKE" frameborder="0" allowfullscreen></iframe>
@@ -225,7 +232,7 @@
     </div>
     <div class="contentEnd"></div>
     </div>
-    <div class="contentSection"  ng-include="sections[3]">
+    <div class="contentSection"  ng-include="sections[4]">
     </div>
     <div class="contentEnd"></div>
     </div>
