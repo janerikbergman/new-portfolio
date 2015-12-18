@@ -121,11 +121,12 @@ app.controller("translationCtrl", ["$scope", "$http", "$sce", "httpFactory", "he
           $scope.section[i] = url[i].en;
         }
       }
-      textLength = data.urls.length;
+      textLength = data.text.length;
       for(i=0;i<textLength;i++)
       {
         if($scope.lang === "fi"){
           $scope.texts[i] = text[i].fi;
+          alert($scope.texts[i]);
         } else if ($scope.lang === "en") {
           $scope.texts[i] = text[i].en;
         }
