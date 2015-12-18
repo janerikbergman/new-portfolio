@@ -16,14 +16,6 @@
   <title>Portfolio - Jan-Erik Bergman</title>
   </head>
   <body ng-controller="translationCtrl">
-  <script type="text/javascript" src="./js/script.js">
-  </script>
-  <script type="text/javascript" src="./js/languageScript.js">
-  </script>
-  <script type="text/javascript" src="./fancybox2/jquery.fancybox.js">
-  </script>
-  <script type="text/javascript" src="./js/jquery.easing.1.3.js">
-  </script>
   <div id="header">
     <h1 id="headerText">Jan-Erik Bergman(Portfolio){ }</h1>     
   
@@ -49,7 +41,7 @@
       </tr>
       <tr>
          <td>
-          <button id="languageButtonMobile" class="navButton" ng-click="changeContent()" ng-bind="texts[5]"></button>
+          <button id="languageButtonMobile" class="navButton" ng-click="changeLanguage(lang)" ng-bind="texts[4]"></button>
         </td>
       </tr>
     </table>
@@ -71,160 +63,43 @@
         <div class="menuButtonContainer"><button class="workButton menuButton largeButton" ng-bind="texts[2]"></button></div>
       </div>
     </div>
-    <button id="languageButton" ng-click="changeContent()" ng-bind="texts[5]"></button>
+    <button id="languageButton" ng-click="changeLanguage(lang)" ng-bind="texts[4]"></button>
   </div>
   </div>
   <div id="spacingDiv">
   </div>
   <div id="section1">
     <div class="contentStart"><hr><img class="contentIcon" width="40" height="40" src="./images/nes_icon_small.png" alt="nes-controller icon" /></div>
-    <div class="contentSection" ng-include="sections[0]">
+    <div class="contentSection" ng-include="section[0]">
     </div>
     <div class="contentEnd"></div>
   </div>
   <div id="section2">
     <div class="contentStart"><hr><img class="contentIcon" width="40" height="40" src="./images/n64_icon_small.png" alt="nes-controller icon" /></div>
-    <div class="contentSection" ng-include="sections[1]">
+    <div class="contentSection" ng-include="section[1]">
     </div>
     <div class="contentSection">
     <h2 ng-bind="texts[3]"></h2>
     <table id="skillTable">
-        <tr>
-            <td>HTML</td>
-            <td>
-                <img src="images/heart_small.png" height="27" width="30" alt="heart">
-                <img src="images/heart_small.png" height="27" width="30" alt="heart">
-                <img src="images/heart_small.png" height="27" width="30" alt="heart">
-                <img src="images/heart_small.png" height="27" width="30" alt="heart">
-                <img src="images/heartempty_small.png" height="27" width="30" alt="heart">
-            </td> 
-        </tr>
-        <tr>
-            <td>CSS</td>
-            <td>
-                <img src="images/heart_small.png" height="27" width="30" alt="heart">
-                <img src="images/heart_small.png" height="27" width="30" alt="heart">
-                <img src="images/heart_small.png" height="27" width="30" alt="heart">
-                <img src="images/heart_small.png" height="27" width="30" alt="heart">
-                <img src="images/heartempty_small.png" height="27" width="30" alt="heart">
-            </td> 
-        </tr>
-        <tr>
-            <td>SASS</td>
-            <td>
-                <img src="images/heart_small.png" height="27" width="30" alt="heart">
-                <img src="images/heart_small.png" height="27" width="30" alt="heart">
-                <img src="images/hearthalf_small.png" height="27" width="30" alt="heart">
-                <img src="images/heartempty_small.png" height="27" width="30" alt="heart">
-                <img src="images/heartempty_small.png" height="27" width="30" alt="heart">
-            </td> 
-        </tr>
-        <tr>
-            <td ng-bind="texts[4]"></td>
-            <td>
-                <img src="images/heart_small.png" height="27" width="30" alt="heart">
-                <img src="images/heart_small.png" height="27" width="30" alt="heart">
-                <img src="images/hearthalf_small.png" height="27" width="30" alt="heart">
-                <img src="images/heartempty_small.png" height="27" width="30" alt="heart">
-                <img src="images/heartempty_small.png" height="27" width="30" alt="heart">
-            </td> 
-        </tr> 
-        <tr>
-            <td>JAVASCRIPT</td>
-            <td>
-                <img src="images/heart_small.png" height="27" width="30" alt="heart">
-                <img src="images/heart_small.png" height="27" width="30" alt="heart">
-                <img src="images/heart_small.png" height="27" width="30" alt="heart">
-                <img src="images/heart_small.png" height="27" width="30" alt="heart">
-                <img src="images/heartempty_small.png" height="27" width="30" alt="heart">
-            </td> 
-        </tr>
-        <tr>
-            <td>JQUERY</td>
-            <td>
-                <img src="images/heart_small.png" height="27" width="30" alt="heart">
-                <img src="images/heart_small.png" height="27" width="30" alt="heart">
-                <img src="images/heart_small.png" height="27" width="30" alt="heart">
-                <img src="images/hearthalf_small.png" height="27" width="30" alt="heart">
-                <img src="images/heartempty_small.png" height="27" width="30" alt="heart">
-            </td> 
-        </tr>
-        <tr>
-            <td>ANGULARJS</td>
-            <td>
-                <img src="images/heart_small.png" height="27" width="30" alt="heart">
-                <img src="images/heart_small.png" height="27" width="30" alt="heart">
-                <img src="images/heart_small.png" height="27" width="30" alt="heart">
-                <img src="images/heartempty_small.png" height="27" width="30" alt="heart">
-                <img src="images/heartempty_small.png" height="27" width="30" alt="heart">
-            </td> 
-        </tr>
-        <tr>
-            <td>BOOTSTRAP</td>
-            <td>
-                <img src="images/heart_small.png" height="27" width="30" alt="heart">
-                <img src="images/heart_small.png" height="27" width="30" alt="heart">
-                <img src="images/heartempty_small.png" height="27" width="30" alt="heart">
-                <img src="images/heartempty_small.png" height="27" width="30" alt="heart">
-                <img src="images/heartempty_small.png" height="27" width="30" alt="heart">
-            </td> 
-        </tr>
-        <tr>
-            <td>JAVA</td>
-            <td>
-                <img src="images/heart_small.png" height="27" width="30" alt="heart">
-                <img src="images/heart_small.png" height="27" width="30" alt="heart">
-                <img src="images/heart_small.png" height="27" width="30" alt="heart">
-                <img src="images/heartempty_small.png" height="27" width="30" alt="heart">
-                <img src="images/heartempty_small.png" height="27" width="30" alt="heart">
-            </td> 
-        </tr>
-        <tr>
-            <td>SQL</td>
-            <td>
-                <img src="images/heart_small.png" height="27" width="30" alt="heart">
-                <img src="images/heart_small.png" height="27" width="30" alt="heart">
-                <img src="images/heart_small.png" height="27" width="30" alt="heart">
-                <img src="images/heartempty_small.png" height="27" width="30" alt="heart">
-                <img src="images/heartempty_small.png" height="27" width="30" alt="heart">
-            </td> 
-        </tr>
-        <tr>
-            <td>XML</td>
-            <td>
-                <img src="images/heart_small.png" height="27" width="30" alt="heart">
-                <img src="images/heart_small.png" height="27" width="30" alt="heart">
-                <img src="images/heart_small.png" height="27" width="30" alt="heart">
-                <img src="images/heartempty_small.png" height="27" width="30" alt="heart">
-                <img src="images/heartempty_small.png" height="27" width="30" alt="heart">
-            </td> 
-        </tr>
-        <tr>
-            <td>GIT</td>
-            <td>
-                <img src="images/heart_small.png" height="27" width="30" alt="heart">
-                <img src="images/heart_small.png" height="27" width="30" alt="heart">
-                <img src="images/hearthalf_small.png" height="27" width="30" alt="heart">
-                <img src="images/heartempty_small.png" height="27" width="30" alt="heart">
-                <img src="images/heartempty_small.png" height="27" width="30" alt="heart">
-            </td> 
-        </tr>
-        
-      </table>
-      </div>
-     <div class="contentEnd"></div>
+      <tr ng-repeat="x in skills">
+        <td>{{x.skill}}</td>
+        <td ng-bind-html="addHearts($index,x.value)"></td>
+      </tr>
+    </table>
+    </div>
+    <div class="contentEnd"></div>
   </div>
   <div id="section3">
     <div class="contentStart"><hr><img class="contentIcon" width="40" height="40" src="./images/gc_icon_small.png" alt="nes-controller icon" /></div>
     <div class="contentSection">
-      <div  ng-include="sections[2]"></div>
+      <div  ng-include="section[2]"></div>
       <div id="gallery">
-        <a class="fancybox-buttons" data-fancybox-group="button" href="./images/virtuaalimuseo/etusivu_big.png" ng-attr-title="{{texts[6]}}"><img src="./images/virtuaalimuseo/etusivu_thumb.png" class="galleryImg" alt="{{texts[6]}}" width="300" height="169" /></a>
-        <a class="fancybox-buttons" data-fancybox-group="button" href="./images/virtuaalimuseo/taiteilijasivu_big.png" ng-attr-title="{{texts[7]}}"><img src="./images/virtuaalimuseo/taiteilijasivu_thumb.png" class="galleryImg hideImg" alt="{{texts[7]}}" width="300" height="169" /></a>
-        <a class="fancybox-buttons" data-fancybox-group="button" href="./images/virtuaalimuseo/teosluettelo_big.png" ng-attr-title="{{texts[8]}}"><img src="./images/virtuaalimuseo/teosluettelo_thumb.png" class="galleryImg hideImg" alt="{{texts[8]}}" width="300" height="169" /></a>
-        <a class="fancybox-buttons" data-fancybox-group="button" href="./images/virtuaalimuseo/teossivu_big.png" ng-attr-title="{{texts[9]}}"><img src="./images/virtuaalimuseo/teossivu_thumb.png" class="galleryImg hideImg" alt="{{texts[9]}}" width="300" height="169" /></a>
+        <a class="fancybox-buttons" data-fancybox-group="button" href="./images/virtuaalimuseo/etusivu_big.png" ng-attr-title="{{texts[5]}}"><img src="./images/virtuaalimuseo/etusivu_thumb.png" class="galleryImg" alt="{{texts[6]}}" width="300" height="169" /></a>
+        <a class="fancybox-buttons" data-fancybox-group="button" href="./images/virtuaalimuseo/taiteilijasivu_big.png" ng-attr-title="{{texts[6]}}"><img src="./images/virtuaalimuseo/taiteilijasivu_thumb.png" class="galleryImg hideImg" alt="{{texts[7]}}" width="300" height="169" /></a>
+        <a class="fancybox-buttons" data-fancybox-group="button" href="./images/virtuaalimuseo/teosluettelo_big.png" ng-attr-title="{{texts[7]}}"><img src="./images/virtuaalimuseo/teosluettelo_thumb.png" class="galleryImg hideImg" alt="{{texts[8]}}" width="300" height="169" /></a>
+        <a class="fancybox-buttons" data-fancybox-group="button" href="./images/virtuaalimuseo/teossivu_big.png" ng-attr-title="{{texts[8]}}"><img src="./images/virtuaalimuseo/teossivu_thumb.png" class="galleryImg hideImg" alt="{{texts[9]}}" width="300" height="169" /></a>
       </div>
-      <div  ng-include="sections[3]"></div> 
+      <div  ng-include="section[3]"></div> 
       <div id="videoArea">
       <div class="videoContainer">          
         <iframe id="gyro" width="560" height="315" src="https://www.youtube.com/embed/b83oBzulbKE" frameborder="0" allowfullscreen></iframe>
@@ -232,7 +107,7 @@
     </div>
     <div class="contentEnd"></div>
     </div>
-    <div class="contentSection"  ng-include="sections[4]">
+    <div class="contentSection"  ng-include="section[4]">
     </div>
     <div class="contentEnd"></div>
     </div>
@@ -242,6 +117,13 @@
     <a href="https://github.com/janerikbergman" target="_blank"><img class="footerLink" src="./images/GitHub_Logo.png" height="30" width="74" alt="Github logo"/></a>
     </div>
   </footer>
-
+  <script type="text/javascript" src="./js/uiScript.js">
+  </script>
+  <script type="text/javascript" src="./js/languageScript.js">
+  </script>
+  <script type="text/javascript" src="./fancybox2/jquery.fancybox.js">
+  </script>
+  <script type="text/javascript" src="./js/jquery.easing.1.3.js">
+  </script>
   </body>
 </html>
