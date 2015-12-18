@@ -1,0 +1,109 @@
+{
+   "urls":[
+      {
+         "fi":"./partials/info_fi.html",
+         "en":"./partials/info_en.html"
+      },
+      {
+         "fi":"./partials/education_fi.html",
+         "en":"./partials/education_en.html"
+      },
+      {
+         "fi":"./partials/work1_fi.html",
+         "en":"./partials/work1_en.html"
+      },
+      {
+         "fi":"./partials/work2_fi.html",
+         "en":"./partials/work2_en.html"
+      },
+      {
+         "fi":"./partials/project_fi.html",
+         "en":"./partials/project_en.html"
+      }
+   ],
+   "skills":[
+     {
+        "skill":"HTML",
+        "value":"4"
+     },
+     {
+        "skill":"CSS",
+        "value":"4"
+     },
+     {
+        "skill":"SASS",
+        "value":"2.5"
+     },
+     {
+        "skill":"JAVASCRIPT",
+        "value":"4"
+     },
+     
+     {
+        "skill":"JQUERY",
+        "value":"3.5"
+     },
+     {
+        "skill":"ANGULARJS",
+        "value":"3"
+     },
+     {
+        "skill":"BOOTSTRAP",
+        "value":"2.5"
+     },
+     {
+        "skill":"JAVA",
+        "value":"3"
+     },
+     {
+        "skill":"SQL",
+        "value":"3"
+     },
+     {
+        "skill":"XML",
+        "value":"3"
+     },
+     {
+        "skill":"GIT",
+        "value":"2.5"
+     }
+  ],
+  "text":[
+   {
+      "fi":"Tietoa",
+      "en":"About Me"
+   },
+   {
+      "fi":"Koulutus",
+      "en":"Education"
+   },
+   {
+      "fi":"Työnäytteet",
+      "en":"Work"
+   },
+   {
+      "fi":"Taidot",
+      "en":"Skills"
+   },
+   {
+      "fi":"English",
+      "en":"Suomi"
+   },
+   {
+      "fi":"Virtuaalimuseo etusivu",
+      "en":"Virtual museum front page"
+   },
+   {
+      "fi":"Virtuaalimuseo taiteilijasivu",
+      "en":"Virtual museum artist page"
+   },
+   {
+      "fi":"Virtuaalimuseo teosluettelo",
+      "en":"Virtual museum catalogue"
+   },
+   {
+      "fi":"Virtuaalimuseo teossivu",
+      "en":"Virtual museum artwork page"
+   }
+  ] 
+}
